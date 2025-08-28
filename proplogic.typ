@@ -7,8 +7,8 @@
 
 = propositional logic
 
-a _proposition_ is a precice statement that is either #text(green)[true] ($top$)
-or #text(red)[false] ($bot$), but not both. for example:
+a _proposition_ is a precice statement that is either #true ($top$)
+or #tfalse ($bot$), but not both. for example:
 - 2 + 2 = 4 (#ttrue)
 - all dogs have 3 legs (#tfalse)
 - $x^2 < 0$ (#tfalse)
