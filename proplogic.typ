@@ -1,13 +1,14 @@
-#import "conf.typ": conf, bi
-#show: conf
+#import "conf.typ": bi, conf
 #let date = datetime(year: 2025, month: 8, day: 27)
+#show: doc => conf(doc, date: date)
 
 #let ttrue = text(green)[true]
 #let tfalse = text(red)[false]
 
 = propositional logic
 
-a _proposition_ is a precice statement that is either #text(green)[true] ($top$) or #text(red)[false] ($bot$), but not both. for example:
+a _proposition_ is a precice statement that is either #text(green)[true] ($top$)
+or #text(red)[false] ($bot$), but not both. for example:
 - 2 + 2 = 4 (#ttrue)
 - all dogs have 3 legs (#tfalse)
 - $x^2 < 0$ (#tfalse)
@@ -24,14 +25,16 @@ however, not all statements are propositions. for example:
 == logical connectives
 === $not$ negation
 
-the _negation_ (or _not_) of a proposition is #ttrue _iff_ the proposition is #tfalse.
+the _negation_ (or _not_) of a proposition is #ttrue _iff_ the proposition is
+#tfalse.
 
 - $not bot = top$
 - $not top = bot$
 
 === $and$ conjunction
 
-the _conjunction_ (or _and_) of two propositions is #ttrue _iff_ *both* propositions are #ttrue.
+the _conjunction_ (or _and_) of two propositions is #ttrue _iff_ *both*
+propositions are #ttrue.
 
 - $top and top = top$
 - $top and bot = bot$
@@ -40,7 +43,8 @@ the _conjunction_ (or _and_) of two propositions is #ttrue _iff_ *both* proposit
 
 === $or$ disjunction
 
-the _disjunction_ (or _or_) of two propositions is #ttrue _iff_ *at least one* proposition is #ttrue.
+the _disjunction_ (or _or_) of two propositions is #ttrue _iff_ *at least one*
+proposition is #ttrue.
 
 - $top or top = top$
 - $top or bot = top$
@@ -49,7 +53,8 @@ the _disjunction_ (or _or_) of two propositions is #ttrue _iff_ *at least one* p
 
 === $xor$ exclusive disjunction
 
-the _exclusive disjunction_ (or _xor_) of two propositions is #ttrue _iff_ *exactly one* proposition is #ttrue.
+the _exclusive disjunction_ (or _xor_) of two propositions is #ttrue _iff_
+*exactly one* proposition is #ttrue.
 
 - $top xor top = bot$
 - $top xor bot = top$
@@ -58,7 +63,9 @@ the _exclusive disjunction_ (or _xor_) of two propositions is #ttrue _iff_ *exac
 
 === $->$ implication
 
-the _implication_ $p -> q$ is #tfalse if $p$ is #ttrue, and $q$ is #tfalse; $p -> q$ is #ttrue otherwise. hint: $p$ is called the _hypothesis_, and $q$ is called the _conclusion_.
+the _implication_ $p -> q$ is #tfalse if $p$ is #ttrue, and $q$ is #tfalse;
+$p -> q$ is #ttrue otherwise. hint: $p$ is called the _hypothesis_, and $q$ is
+called the _conclusion_.
 
 - $top -> top = top$
 - $top -> bot = bot$
@@ -67,7 +74,8 @@ the _implication_ $p -> q$ is #tfalse if $p$ is #ttrue, and $q$ is #tfalse; $p -
 
 === #bi[$<->$ biconditional]
 
-the #bi[_biconditional_] $p <-> q$ is #ttrue _iff_ $p$ and $q$ *assume the same* truth value.
+the #bi[_biconditional_] $p <-> q$ is #ttrue _iff_ $p$ and $q$ *assume the same*
+truth value.
 
 - $top <-> top = top$
 - $top <-> bot = bot$
@@ -97,15 +105,22 @@ given an implication $p -> q$:
 
 === two propositions
 
-show that an implication $p -> q$ and its _contrapositive_ $not q -> not p$ always have the same value.
+show that an implication $p -> q$ and its _contrapositive_ $not q -> not p$
+always have the same value.
 
 #table(
   columns: (auto, auto, .5fr, .5fr, 1fr),
-  table.header($p, q$, $not q, not p$, $p -> q$, $not q -> not p$, $(p -> q) #bi[$<->$] (not q -> p)$),
+  table.header(
+    $p, q$,
+    $not q, not p$,
+    $p -> q$,
+    $not q -> not p$,
+    $(p -> q) #bi[$<->$] (not q -> p)$,
+  ),
   [$top$ $top$], [$bot$ $bot$], $top$, $top$, $top$,
   [$top$ $bot$], [$top$ $bot$], $bot$, $bot$, $top$,
   [$bot$ $top$], [$bot$ $top$], $top$, $top$, $top$,
-  [$bot$ $bot$], [$top$ $top$], $top$, $top$, $top$
+  [$bot$ $bot$], [$top$ $top$], $top$, $top$, $top$,
 )
 
 
@@ -123,7 +138,7 @@ construct a truth table for $(p and q) -> not r$.
   [$bot$ $top$ $top$], $bot$, $bot$, $top$,
   [$bot$ $top$ $bot$], $bot$, $top$, $top$,
   [$bot$ $bot$ $top$], $bot$, $bot$, $top$,
-  [$bot$ $bot$ $bot$], $bot$, $top$, $top$
+  [$bot$ $bot$ $bot$], $bot$, $top$, $top$,
 )
 
 == complex example 2
@@ -132,7 +147,13 @@ construct a truth table for $p and (not q or r) -> r$.
 
 #table(
   columns: (auto, 1fr, 1fr, 1fr, 1fr),
-  table.header($p, q, r$, $not q$, $not q or r$, $p and (not q or r)$, $p and (not q or r) -> r$),
+  table.header(
+    $p, q, r$,
+    $not q$,
+    $not q or r$,
+    $p and (not q or r)$,
+    $p and (not q or r) -> r$,
+  ),
   [$top$ $top$ $top$], $bot$, $top$, $top$, $top$,
   [$top$ $top$ $bot$], $bot$, $bot$, $bot$, $top$,
   [$top$ $bot$ $top$], $top$, $top$, $top$, $top$,
@@ -140,5 +161,5 @@ construct a truth table for $p and (not q or r) -> r$.
   [$bot$ $top$ $top$], $bot$, $top$, $bot$, $top$,
   [$bot$ $top$ $bot$], $bot$, $bot$, $bot$, $top$,
   [$bot$ $bot$ $top$], $top$, $top$, $bot$, $top$,
-  [$bot$ $bot$ $bot$], $top$, $top$, $bot$, $top$
+  [$bot$ $bot$ $bot$], $top$, $top$, $bot$, $top$,
 )
