@@ -99,5 +99,20 @@ proposition: $(p and q) -> not r$. we can break this down into smaller parts, an
   [$bot$ $top$ $top$], $bot$, $bot$, $top$,
   [$bot$ $top$ $bot$], $bot$, $top$, $top$,
   [$bot$ $bot$ $top$], $bot$, $bot$, $top$,
-  [$bot$ $bot$ $bot$], $bot$, $top$, $top$,
+  [$bot$ $bot$ $bot$], $bot$, $top$, $top$
+)
+
+== example, part 2
+
+#table(
+  columns: (auto, 1fr, 1fr, 1fr, 1fr),
+  table.header($p, q, r$, $not q$, $not q or r$, $p and (not q or r)$, $p and (not q or r) -> r$),
+  [$top$ $top$ $top$], $bot$, $top$, $top$, $top$,
+  [$top$ $top$ $bot$], $bot$, $bot$, $bot$, $top$,
+  [$top$ $bot$ $top$], $top$, $top$, $top$, $top$,
+  [$top$ $bot$ $bot$], $top$, $top$, $top$, $bot$,
+  [$bot$ $top$ $top$], $bot$, $top$, $bot$, $top$,
+  [$bot$ $top$ $bot$], $bot$, $bot$, $bot$, $top$,
+  [$bot$ $bot$ $top$], $top$, $top$, $bot$, $top$,
+  [$bot$ $bot$ $bot$], $top$, $top$, $bot$, $top$
 )
