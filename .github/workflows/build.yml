@@ -1,0 +1,19 @@
+name: build and push pdf
+
+on:
+  push:
+    branches: [ "trunk" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: typst-community/setup-typst@v4
+      - run: ./build.sh
+      - run: |
+          git add docs
+          git commit -m "automated build: $(date -u +"%Y-%m-%dT%H:%M:%SZ")"
+          git push
