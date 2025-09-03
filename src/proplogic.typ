@@ -107,7 +107,8 @@ we can also translate sentences from plain english into propositions. here are
 some common patterns to memorize:
 
 \
-remember that $p$ is called the _hypothesis_, and $q$ is called the _conclusion_
+(remember that $p$ is called the _hypothesis_, and $q$ is called the
+_conclusion_.)
 
 - $q "if" p equiv p -> q$
 - $"if" p", then" q equiv p -> q$
@@ -167,6 +168,42 @@ we can reuse our definitions from example 1:
 \
 this is the _contrapositive_ of example 1: we swapped both sides and negated
 them both.
+
+=== example for conditional statements
+
+remember in 1.3 where we talked about other conditional statements such as
+_inverse_, _converse_, and _contrapositive_? we can also translate those into
+plain words.
+
+\
+take the proposition $p -> q$ that:
+
+\
+#align(center)["if it is raining, then the flowers are watered."]
+
+\
+the _converse_ ($q -> p$) of that would be:
+
+\
+#align(center)["if the flowers are watered, then it is raining."]
+
+\
+the _inverse_ ($not p -> not q$) would be:
+
+\
+#align(center)["if it is not raining, then the flowers are not watered."]
+
+\
+and finally, the _contrapositive_ ($not q -> not p$) would be:
+
+\
+#align(center)["if the flowers are not watered, then it is not raining."]
+
+
+\
+you might notice that the _contrapositive_ is the only proposition that is
+logically equivalent to our original statement $p -> q$. you can find the truth
+table comparison below in 1.5.1.
 
 == activities
 
