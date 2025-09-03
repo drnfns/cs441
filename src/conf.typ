@@ -12,12 +12,13 @@
   show heading: set block(above: 1.4em, below: 1em)
   set heading(numbering: "1.1.1")
   set page(footer: context [
-    #align(right)[#counter(page).display()]
+    cs441 discrete structures
+    #h(1fr)
+    #counter(page).display()
   ])
   set page(header: [
-    cs441
     #h(1fr)
-    #date.display()
+    last updated #date.display()
   ])
 
   doc
