@@ -113,7 +113,7 @@ remember that $p$ is called the _hypothesis_, and $q$ is called the _conclusion_
 - $"if" p", then" q equiv p -> q$
 - $p "only if" q equiv p -> q$
 - $p "if and only if" q equiv p #bi[$<->$] q$
-- $"neither" p "nor" q equiv not p and not q = not(p or q)$ 
+- $"neither" p "nor" q equiv not p and not q = not(p or q)$
 - $p "unless" q equiv not q -> p$
 
 === example 1
