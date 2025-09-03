@@ -126,9 +126,9 @@ _conclusion_.)
 
 \
 let:
-- $r =$ you can see an R-rated movie
-- $o =$ you are over 17
-- $a =$ you are accompanied by your legal guardian
+- $r equiv$ you can see an R-rated movie
+- $o equiv$ you are over 17
+- $a equiv$ you are accompanied by your legal guardian
 
 \
 #align(center)[#rect[$r -> (o or a)$]]
@@ -142,9 +142,9 @@ let:
 
 \
 let:
-- $c =$ you can have free coffee
-- $s =$ you are a senior citizen
-- $t =$ it is a tuesday
+- $c equiv$ you can have free coffee
+- $s equiv$ you are a senior citizen
+- $t equiv$ it is a tuesday
 
 \
 #align(center)[#rect[$(s and t) -> c$]]
@@ -158,9 +158,9 @@ let:
 
 \
 we can reuse our definitions from example 1:
-- $r =$ you can see an R-rated movie
-- $o =$ you are over 17
-- $a =$ you are accompanied by your legal guardian
+- $r equiv$ you can see an R-rated movie
+- $o equiv$ you are over 17
+- $a equiv$ you are accompanied by your legal guardian
 
 \
 #align(center)[#rect[$(not o and not a) -> not r$]]
@@ -275,9 +275,9 @@ construct a truth table for $p and (not q or r) -> r$.
 
 \
 let:
-- $s =$ you can get free salad
-- $e =$ you order off the extended menu
-- $w =$ it is a wednesday
+- $s equiv$ you can get free salad
+- $e equiv$ you order off the extended menu
+- $w equiv$ it is a wednesday
 
 \
 #align(center)[#rect[$s -> (e and w)$]]
@@ -289,10 +289,10 @@ let:
 
 \
 let:
-- $r =$ it is raining
-- $s =$ today is saturday
-- $g =$ you will play video games
-- $m =$ you will watch a movie
+- $r equiv$ it is raining
+- $s equiv$ today is saturday
+- $g equiv$ you will play video games
+- $m equiv$ you will watch a movie
 
 \
 #align(center)[#rect[$(r and s) -> (g or m)$]]
