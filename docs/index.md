@@ -5,7 +5,7 @@ hi, you can find my notes for the
 [fall 2025 cs441](https://nineil.github.io/courses/fall25_cs441/) here. i also
 typed up the recitation and homework problems so you don't have to!
 
-this website and its contents are <a href="https://github.com/drnfns/cs441">source available</a>; the copyright belongs to their respective creators.
+this website and its contents are <a href="https://github.com/drnfns/cs441">source available</a>, and they can only be used for educational purposes; the copyright belongs to their respective creators.
 
 | Section                   | Lecture Notes                                                                                                                                    | Recitation                                                                                                                               | Homework                                                                                                                              |
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
