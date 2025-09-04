@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 for p in ./{lec,rec,hw}/*.typ; do
   printf 'checking %s...\n' "$p"
