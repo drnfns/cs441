@@ -65,7 +65,7 @@ the _exclusive disjunction_ (or _xor_) of two propositions is #ttrue _iff_
 
 the _implication_ $p -> q$ is #tfalse if $p$ is #ttrue, and $q$ is #tfalse;
 $p -> q$ is #ttrue otherwise. hint: $p$ is called the _hypothesis_, and $q$ is
-called the _conclusion_.
+called the _conclusion_. you can also rewrite it in $not p or q$.
 
 - $top -> top = top$
 - $top -> bot = bot$
