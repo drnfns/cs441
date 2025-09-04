@@ -1,0 +1,5 @@
+[default]
+check-filename = false
+extend-ignore-re = [
+  "conf.typ",
+]
