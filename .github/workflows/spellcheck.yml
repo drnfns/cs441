@@ -1,0 +1,22 @@
+name: spellcheck
+
+on:
+  push:
+    branches: [ "trunk" ]
+    paths:
+      - hw/**
+      - lec/**
+      - rec/**
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: crate-ci/typos@v1.34.0
+        with:
+          files: "./**/*.typ"
+          config: "_typos.toml"
+          
