@@ -1,6 +1,6 @@
 #import "@preview/hand-in:1.0.0": assignment
 
-#let conf(doc, title: "recitation", name: "name", id: "id") = {
+#let conf(doc, title: "recitation", name: "name", id: "id", date: datetime.today()) = {
   show: assignment.with(
     title: title,
     student: (
@@ -11,6 +11,7 @@
       name: "Discrete Structures for CS",
       code: "CS441",
     ),
+    date: date
   )
 
   set page(paper: "us-letter")
