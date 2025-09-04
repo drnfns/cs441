@@ -3,6 +3,10 @@ name: build and push pdf
 on:
   push:
     branches: [ "trunk" ]
+    paths:
+      - hw/**
+      - lec/**
+      - rec/**
   workflow_dispatch:
 
 jobs:
