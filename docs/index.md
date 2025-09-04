@@ -1,5 +1,5 @@
 # cs441 notes
-[![build and push pdf](https://github.com/drnfns/cs441/actions/workflows/build.yml/badge.svg)](https://github.com/drnfns/cs441/actions/workflows/build.yml) [![pages-build-deployment](https://github.com/drnfns/cs441/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/drnfns/cs441/actions/workflows/pages/pages-build-deployment)
+[![build and push pdf](https://github.com/drnfns/cs441/actions/workflows/build.yml/badge.svg)](https://github.com/drnfns/cs441/actions/workflows/build.yml) [![pages-build-deployment](https://github.com/drnfns/cs441/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/drnfns/cs441/actions/workflows/pages/pages-build-deployment) [![spellcheck](https://github.com/drnfns/cs441/actions/workflows/spellcheck.yml/badge.svg)](https://github.com/drnfns/cs441/actions/workflows/spellcheck.yml)
 
 hi, you can find my notes for the
 [fall 2025 cs441](https://nineil.github.io/courses/fall25_cs441/) here. i also
