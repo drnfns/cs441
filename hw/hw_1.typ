@@ -1,5 +1,5 @@
 #import "conf.typ": conf
-#show: conf.with(id: "Username:", name: "Name:", title: "hw_1")
+#show: conf.with(id: "Username:", name: "Name:", title: "hw_1", date: datetime(year: 2025, month: 9, day: 3))
 
 = Problem 1
 Which of these sentences are propositions? What are the truth values of those
@@ -104,7 +104,7 @@ Construct a truth table for $((p -> q) -> r) -> s$.
 
 = Challenge 1
 
-Fuzzy logic is used in artificial intelligence. In fuzzy logic, a proposition
+*Fuzzy logic* is used in artificial intelligence. In fuzzy logic, a proposition
 has a truth value that is a number between 0 and 1, inclusive. A proposition
 with a truth value of 0 is false and one with a truth value of 1 is true. Truth
 values that are between 0 and 1 indicate varying degrees of truth. For instance,
