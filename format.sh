@@ -1,5 +1,6 @@
 #!/bin/sh
 
-set -ex
-
-typstyle --timing --wrap-text -l 80 -i src/*.typ
+for p in ./{hw,src}/*.typ; do
+  printf 'formatting %s...\n' "$p"
+  typstyle --wrap-text -l 80 -i "$p"
+done

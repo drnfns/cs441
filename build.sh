@@ -1,11 +1,10 @@
 #!/bin/sh
 
-set -ex
+mkdir -p docs/pdfs
 
-mkdir -p docs
-
-for p in ./src/*.typ; do
+for p in ./{hw,src}/*.typ; do
   f="$(basename "$p")"
   [ "$f" = "conf.typ" ] && continue
-  typst compile "$p" "docs/${f%%.typ}.pdf"
+  printf 'building %s...\n' "$p"
+  typst compile "$p" "docs/pdfs/${f%%.typ}.pdf"
 done
