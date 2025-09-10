@@ -1,13 +1,13 @@
 #import "conf.typ": bi, conf
 #let date = datetime(year: 2025, month: 9, day: 3)
-#show: doc => conf(doc, date: date)
+#show: conf.with(date: date)
 
 #let ttrue = text(green)[true]
 #let tfalse = text(red)[false]
 
 = propositional logic
 
-a _proposition_ is a precise statement that is either #true ($top$) or #tfalse
+a _proposition_ is a precise statement that is either #ttrue ($top$) or #tfalse
 ($bot$), but not both. for example:
 - 2 + 2 = 4 (#ttrue)
 - all dogs have 3 legs (#tfalse)
@@ -65,7 +65,7 @@ the _exclusive disjunction_ (or _xor_) of two propositions is #ttrue _iff_
 
 the _implication_ $p -> q$ is #tfalse if $p$ is #ttrue, and $q$ is #tfalse;
 $p -> q$ is #ttrue otherwise. hint: $p$ is called the _hypothesis_, and $q$ is
-called the _conclusion_. you can also rewrite it in $not p or q$.
+called the _conclusion_.
 
 - $top -> top = top$
 - $top -> bot = bot$
