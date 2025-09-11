@@ -1,15 +1,14 @@
 #import "conf.typ": bi, conf
-#let date = datetime(year: 2025, month: 9, day: 8)
-#show: conf.with(date: date)
+#show: conf.with(date: datetime(year: 2025, month: 9, day: 8))
 
 = logical puzzles
 
 == example 1
-alice and bob are technical support agents. if an agent is having a bad
-day, they will always lie to you. if an agent is having a good day, they
-will always tell you the truth. alice tells you that bob is having a bad
-day. bob tells you that he and alice are both having the same type of
-day. can you trust the advice you receive from alice during your call?
+alice and bob are technical support agents. if an agent is having a bad day,
+they will always lie to you. if an agent is having a good day, they will always
+tell you the truth. alice tells you that bob is having a bad day. bob tells you
+that he and alice are both having the same type of day. can you trust the advice
+you receive from alice during your call?
 
 === rules
 - if an agent is having a bad day, they will always lie
@@ -22,27 +21,26 @@ day. can you trust the advice you receive from alice during your call?
 - $not A -> B$
   - if alice isn't lying, then bob is having a bad day
 - $not B -> (A <-> B)$
-  - if bob isn't lying, then alice and bob are both having the same type
-    of day
+  - if bob isn't lying, then alice and bob are both having the same type of day
 
 === case 1
-we assume $A$ is true, where alice is having a bad day. that means alice
-lies about bob having a bad day; therefore bob is having a good day.
+we assume $A$ is true, where alice is having a bad day. that means alice lies
+about bob having a bad day; therefore bob is having a good day.
 
 \
-based on alice's statement, we can deduct that $A equiv top$ and
-$B equiv bot$. if we substitute in the truth values in the propositions
-above, we can get that:
+based on alice's statement, we can deduct that $A equiv top$ and $B equiv bot$.
+if we substitute in the truth values in the propositions above, we can get that:
 
 \
 $
-                         not top -> bot & = top #h(1em) && checkmark \
-  not bot -> (top <-> bot) = top -> bot & = bot         && crossmark "(contradiction)"
+  not top -> bot & = top #h(1em) && checkmark \
+  not bot -> (top <-> bot) = top -> bot & = bot && crossmark "(contradiction)"
 $
 
 === case 2
-we assume $B$ is true, where bob is having a bad day, therefore,
-according to the rules, alice must be having a good day, where $A equiv bot$ and $B equiv top$. we can then substitute in the values:
+we assume $B$ is true, where bob is having a bad day, therefore, according to
+the rules, alice must be having a good day, where $A equiv bot$ and
+$B equiv top$. we can then substitute in the values:
 
 \
 $
@@ -51,18 +49,18 @@ $
 $
 
 === conclusion
-since case 2 is the only case that satisfies both propositions, we can
-conclude that bob is having a bad day, and alice is having a good day;
-therefore, we can trust alice's advice.
+since case 2 is the only case that satisfies both propositions, we can conclude
+that bob is having a bad day, and alice is having a good day; therefore, we can
+trust alice's advice.
 
 == example 2
-consider a group of friends: fredrik, anuradha, and cai. if fredrik is
-not the oldest, then anuradha is. if anuradha is not the youngest, then
-cai is the oldest. determine the relative ages of fredrik, anuradha, and
-cai.
+consider a group of friends: fredrik, anuradha, and cai. if fredrik is not the
+oldest, then anuradha is. if anuradha is not the youngest, then cai is the
+oldest. determine the relative ages of fredrik, anuradha, and cai.
 
 === rules
-- fredrik, anuradha and cai can't be the the oldest or the youngest at the same time
+- fredrik, anuradha and cai can't be the the oldest or the youngest at the same
+  time
 
 === propositions
 - $F equiv "fredrik is the oldest"$
@@ -79,32 +77,31 @@ cai.
 
 === case 2
 
+#pagebreak()
 = propositional equivalence
 
 == definitions
-*tautology*: a compound proposition that is *always true*, regardless of
-the truth values of the propositions occurring within it. ($p or not p$)
+*tautology*: a compound proposition that is *always true*, regardless of the
+truth values of the propositions occurring within it. ($p or not p$)
 
 \
-*contradition*: a compound proposition that is *always false*,
-regardless of the truth values of the propositions occurring within it.
-($not p and p$)
+*contradition*: a compound proposition that is *always false*, regardless of the
+truth values of the propositions occurring within it. ($not p and p$)
 
 \
-*contingency*: a compound proposition whose truth value is *dependent*
-on the propositions occurring within it. ($p or q$)
+*contingency*: a compound proposition whose truth value is *dependent* on the
+propositions occurring within it. ($p or q$)
 
 \
-*logically equivalent*: two propositions $p$ and $q$ are logically
-equivalent exactly when $p <-> q$ is a _tautology_. we use the notation
-$p equiv q$ to express that $p$ and $q$ are logically equivalent.
-($p -> q equiv not p or q$)
+*logically equivalent*: two propositions $p$ and $q$ are logically equivalent
+exactly when $p <-> q$ is a _tautology_. we use the notation $p equiv q$ to
+express that $p$ and $q$ are logically equivalent. ($p -> q equiv not p or q$)
 
 == proving simple logical equivalences
 
-for simple propositions, we can just create a truth table for both
-sides. for example, take this equivalence: $p -> q equiv not p or q$. we
-only need to create 4 rows, since there is only $p$ and $q$.
+for simple propositions, we can just create a truth table for both sides. for
+example, take this equivalence: $p -> q equiv not p or q$. we only need to
+create 4 rows, since there is only $p$ and $q$.
 
 \
 #table(
@@ -117,14 +114,14 @@ only need to create 4 rows, since there is only $p$ and $q$.
 )
 
 \
-however, since the number of rows grow exponentially($2^n$), this is not
-usually the best way to prove an equivalence. in the next section, we
-introduce some common yet important logic equivalences to help you
-construct new logical equivalences.
+however, since the number of rows grow exponentially($2^n$), this is not usually
+the best way to prove an equivalence. in the next section, we introduce some
+common yet important logic equivalences to help you construct new logical
+equivalences.
 
 == useful logic equivalences
-we use $T$ to denote a compound proposition that is a *tautology* and
-$F$ for a compound proposition that is a *contradiction*.
+we use $T$ to denote a compound proposition that is a *tautology* and $F$ for a
+compound proposition that is a *contradiction*.
 
 #table(
   columns: (auto, 1fr),
@@ -221,3 +218,9 @@ $F$ for a compound proposition that is a *contradiction*.
     ],
   ),
 )
+
+#pagebreak()
+= activities
+== question 1: prove that $(p and q) -> (p or q)$ is a tautology.
+
+== question 2: prove that $(p -> q) or (p -> r) equiv p -> (q or r)$

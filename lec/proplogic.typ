@@ -1,5 +1,5 @@
 #import "conf.typ": bi, conf
-#let date = datetime(year: 2025, month: 9, day: 3)
+#let date = datetime(year: 2025, month: 8, day: 27)
 #show: conf.with(date: date)
 
 #let ttrue = text(green)[true]
@@ -101,6 +101,7 @@ given an implication $p -> q$:
 - $q -> p$ is its _converse_
 - $not q -> not p$ is its _contrapositive_
 
+#pagebreak()
 == plain words
 
 we can also translate sentences from plain english into propositions. here are
@@ -205,7 +206,8 @@ you might notice that the _contrapositive_ is the only proposition that is
 logically equivalent to our original statement $p -> q$. you can find the truth
 table comparison below in 1.5.1.
 
-== activities
+#pagebreak()
+= activities
 
 === two propositions
 
