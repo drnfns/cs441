@@ -1,6 +1,9 @@
 #!/bin/bash
 
 for p in ./{lec,rec,hw}/*.typ; do
-  printf 'formatting %s...\n' "$p"
-  typstyle --wrap-text -l 80 -i "$p"
+  typstyle --wrap-text -l 80 -i "$p" & 
+  printf '(%s) formatting %s...\n' "$!" "$p"
 done
+
+printf 'waiting for all jobs to finish...\n'
+wait
