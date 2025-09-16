@@ -1,5 +1,10 @@
 #import "conf.typ": conf
-#show: conf.with(id: "alj213", name: "Alex Jin", title: "hw_1")
+#show: conf.with(id: "alj213", name: "Alex Jin", title: "hw_1", date: datetime(
+  year: 2025,
+  month: 9,
+  day: 3,
+))
+
 
 = Problem 1
 Which of these sentences are propositions? What are the truth values of those

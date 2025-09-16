@@ -153,20 +153,30 @@ integers between 0 and 6 are prime"
 
 == quantifiers precedence
 
-the universal and existential quantifiers have the _highest precedence_ of all logical operators. when needed, use parentheses to disambiguate a quantifier's scope.
+the universal and existential quantifiers have the _highest precedence_ of all
+logical operators. when needed, use parentheses to disambiguate a quantifier's
+scope.
 
-- $forall x thin P(x) -> Q(x)$ actually means #text(red)[(]$forall x thin P(x)$#text(red)[)]$ -> Q(x)$
-- $exists x thin P(x) and Q(x)$ actually means #text(red)[(]$exists x thin P(x)$#text(red)[)]$ and Q(x)$
+- $forall x thin P(x) -> Q(x)$ actually means #text(
+    red,
+  )[(]$forall x thin P(x)$#text(red)[)]$-> Q(x)$
+- $exists x thin P(x) and Q(x)$ actually means #text(
+    red,
+  )[(]$exists x thin P(x)$#text(red)[)]$and Q(x)$
 
 == note on logical equivalence
 
-two statements involving predicates and quantifiers are *logically equivalent* _if and only if_ they take on the same truth value regardless of which predicates are substituted into these statements and which domains of discourse are used.
+two statements involving predicates and quantifiers are *logically equivalent*
+_if and only if_ they take on the same truth value regardless of which
+predicates are substituted into these statements and which domains of discourse
+are used.
 
 == negating quantifiers
 
 === universal quantifier
 
-negating a universal quantifier will turn it into a existential quantifier and negate the propositions inside it.
+negating a universal quantifier will turn it into a existential quantifier and
+negate the propositions inside it.
 
 \
 $
@@ -175,7 +185,8 @@ $
 
 === existential quantifier
 
-negating is similar for existential quantifier. $exists$ turn into $forall$ and negate the propositions inside it.
+negating is similar for existential quantifier. $exists$ turn into $forall$ and
+negate the propositions inside it.
 
 \
 $
