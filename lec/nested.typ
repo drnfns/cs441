@@ -22,8 +22,11 @@ $
 
 == translation
 
-yes, we can (obiviously) still formalize sentences from english. let's see this
-example:
+yes, we can (obiviously) still formalize sentences from english. let's see some
+examples.
+
+=== example 1
+take this statement:
 
 \
 #align(center)[every real number except zero has a multiplicative inverse.]
@@ -41,4 +44,30 @@ finally, we can formalize that sentence:
 \
 $
   forall x thin [(x != 0) -> exists y thin [x dot y = 1]]
+$
+
+=== example 2
+take this statement:
+
+\
+#align(center)[every student has at least one friend that is dating a steelers
+  fan.]
+
+\
+we first need to rewrite our statement again:
+
+\
+#align(center)[for *every* student $x$, then\ there *exists* a friend of theirs
+  who is dating a steelers fan.]
+
+\
+Let:
+- $S(x) equiv$ "$x$ is a student"
+- $F(x, y) equiv$ "$x$ is friends with $y$"
+- $D(x, y) equiv$ "$x$ and $y$ are dating"
+- $E(x) equiv$ "$x$ is a steelers fan"
+
+\
+$
+  forall x thin [S(x) -> exists y thin [F(x, y) and D(y, z) and E(z)]]
 $

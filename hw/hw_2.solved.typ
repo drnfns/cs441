@@ -120,7 +120,7 @@ did it." Diana said, "Carlos lied when he said that I did it."
   + *Alice is telling the truth.*
     - Alice states that Carlos is the criminal.
     - John lies, implies John have committed the crime. *Contradicts with
-      Alice's statement.*
+        Alice's statement.*
   + *John is telling the truth.*
     - John states that he did not do it.
     - Alice lies, implies either Alice, Diana or Diana is the criminal.
@@ -131,13 +131,13 @@ did it." Diana said, "Carlos lied when he said that I did it."
     - Diana lies, implies Carlos is telling the truth.
     - Alice lies, implies that Alice, Diana, or John is the criminal.
     - John lies, implies that themselves is the criminal. *Contradicts with
-      Carlo's statement.*
+        Carlo's statement.*
   + *Diana is telling the truth.*
     - Diana states that Carlos is lying.
     - Carlos lies, implying that either John, Alice, or Carlos is the criminal.
     - Alice lies, implies either Alice, Diana or John is the criminal.
     - John lies, implies themselves is the criminal. *John is the criminal, fits
-      all four statements*.
+        all four statements*.
 + Since only one person is lying, we consider four cases again.
   + *Alice is lying.*
     - Alice lies, implies either Alice, John, or Diana is the criminal.
@@ -153,7 +153,7 @@ did it." Diana said, "Carlos lied when he said that I did it."
     - John tells the truth, implies either Alice, Carlos, or Diana is the
       criminal.
     - Diana tells the truth, Carlos lies. *No contradictions, Carlos is the
-      criminal.*
+        criminal.*
 
 = Problem 3
 Show that $(p -> q) and (p -> r)$ and $p -> (q and r)$ are logically equivalent.
@@ -320,8 +320,8 @@ Show that ${|}$ is a functionally complete collection of logical operators.
 According to the logic table, $p | q$ (the _NAND_ operator) is logically
 equivalent to $not (p and q)$.
 
-Below is a comparison table showing that $p | q <=> not (p and q)$ is a tautology, therefore they are
-logically equivalent.
+Below is a comparison table showing that $p | q <=> not (p and q)$ is a
+tautology, therefore they are logically equivalent.
 #table(
   columns: (auto, auto, auto, auto),
   table.header($p, q$, $p and q$, $not (p and q)$, $p | q$),

@@ -222,5 +222,20 @@ compound proposition that is a *contradiction*.
 #pagebreak()
 = activities
 == question 1: prove that $(p and q) -> (p or q)$ is a tautology.
+$
+  & (p and q) -> (p or q) \
+  & equiv not (p and q) or (p or q) \
+  & equiv not p or not q or p or q \
+  & equiv (not p or p) or (not q or q) \
+  & equiv top or top \
+  & equiv top
+$
 
 == question 2: prove that $(p -> q) or (p -> r) equiv p -> (q or r)$
+$
+  & (p -> q) or (p -> r) \
+  & equiv not p or q or not p or r \
+  & equiv not p or q or r \
+  & equiv not p or (q or r) \
+  & equiv p -> (q or r)
+$
