@@ -1,12 +1,12 @@
 name: spellcheck
 
 on:
-  push:
-    branches: [ "trunk" ]
-    paths:
-      - hw/**
-      - lec/**
-      - rec/**
+  # push:
+  #   branches: [ "trunk" ]
+  #   paths:
+  #     - hw/**
+  #     - lec/**
+  #     - rec/**
   workflow_dispatch:
 
 jobs:
