@@ -12,8 +12,9 @@
 
 = Problem 1
 Let $P(x, y)$ be the statement "Student $x$ has taken class $y$, "where the
-domain for both $x$ and $y$ consists of all students in your class. Express each
-of these quantifications in English.
+domain for $x$ consists of all students in your class and $y$ consists of all
+computer science courses at your school. Express each of these quantifications
+in english.
 
 + $exists x exists y thin P(x, y)$
 + $exists x forall y thin P(x, y)$
@@ -86,7 +87,7 @@ What rule of inference is used in each of these arguments?
 For each of these arguments, explain which rules of inference are used for each
 step.
 
-+ "Linda, a student in this class, owns are red convertible. Everyone who owns a
++ "Linda, a student in this class, owns a red convertible. Everyone who owns a
   red convertible has gotten at least one speeding ticket. Therefore, someone in
   this class has gotten a speeding ticket."
 + "Each of five roommates, Melissa, Aaron, Ralph, Veneesha, and Keeshawn, has
