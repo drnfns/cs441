@@ -12,9 +12,7 @@ for a direct proof, we assume that the premise $p$ is true and then show that
 the conclusion $q$ must follow.
 
 === example
-*Theorem*: if $n$ is an odd integer, then $n^3$ is an odd integer.
-
-\
+*Theorem*: if $n$ is an odd integer, then $n^3$ is an odd integer. \
 *Proof*:
 + *assume $p$ is true*: assume $n$ is an odd integer. this means $n$ can be
   written as $2k + 1$ for some integer $k$.
