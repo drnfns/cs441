@@ -12,7 +12,7 @@
   )
   set text(font: "Recursive Sn Csl St", size: 10pt)
   show raw: set text(font: "Recursive Mn Csl St")
-  // show heading: set block(above: 1.4em, below: 1em)
+  show heading: set block(above: 1.4em, below: 1em)
   set heading(numbering: "1.1.1")
   set page(footer: context [
     cs441 discrete structures
