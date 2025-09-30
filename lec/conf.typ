@@ -1,4 +1,7 @@
+#import "@preview/catppuccin:1.0.1": catppuccin, flavors
+
 #let conf(doc, date: datetime.today()) = {
+  show: catppuccin.with(flavors.latte)
   set page(paper: "us-letter")
   set page(margin: 1.75in)
   set par(
@@ -7,9 +10,9 @@
     first-line-indent: 1.8em,
     justify: true,
   )
-  set text(font: "New Computer Modern")
-  show raw: set text(font: "Monofoki")
-  show heading: set block(above: 1.4em, below: 1em)
+  set text(font: "Recursive Sn Csl St", size: 10pt)
+  show raw: set text(font: "Recursive Mn Csl St")
+  // show heading: set block(above: 1.4em, below: 1em)
   set heading(numbering: "1.1.1")
   set page(footer: context [
     cs441 discrete structures

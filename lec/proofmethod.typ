@@ -106,3 +106,23 @@ know whether $sqrt(2)^sqrt(2)$ is irrational or rational. however, in either
 case, we can use it to construct a rational number.
 
 == uniqueness proofs
+we use uniqueness proofs to show that not only the desired solution/element
+exists for the theorem, it is the only solution/element.
+
+\
+to prove the uniqueness of the solution:
++ provide an existence proof
++ show that any solution to the problem is equivalent to the solution generated
+  in step 1.
+
+=== example
+*theorem*: let $a$ and $b$ be real numbers. there exists a unique real number
+$r$ such that $a dot r + b = 0$.
+
+\
+*proof*:
+- $r = -b / a$ is a solution to this equality since $-(a b)/a + b = -b + b = 0$.
+  _(existence step)_
+- assume that $a s + b = 0$.
+- then $a dot s = -b$, so $s = -b / a$, which means $s equiv r$. _(uniqueness
+    step)_ #qed
