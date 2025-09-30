@@ -32,3 +32,8 @@
   ))
   box(content)
 }
+
+#let qed = {
+  h(1fr)
+  $qed$
+}
