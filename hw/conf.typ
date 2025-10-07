@@ -27,3 +27,8 @@
 
   doc
 }
+
+#let qed = {
+  h(1fr)
+  $qed$
+}
