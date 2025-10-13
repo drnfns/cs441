@@ -1,4 +1,4 @@
-#import "conf.typ": bi, conf
+#import "conf.typ": conf
 #let date = datetime(year: 2025, month: 9, day: 29)
 #show: conf.with(date: date)
 
@@ -195,8 +195,8 @@ has $a_1$ as its first element, $a_2$ as its second element, ..., so on and so
 forth.
 
 \
-#align(center)[*note*: $(a_1, a_2, ..., a_n) = (b_1, b_2, ..., a_n)$ _if and only
-    if_ $a_i = b_i$ for $i = 1, ..., n$]
+#align(center)[*note*: $(a_1, a_2, ..., a_n) = (b_1, b_2, ..., a_n)$ _if and
+    only if_ $a_i = b_i$ for $i = 1, ..., n$]
 
 == cartesian product
 
@@ -224,7 +224,8 @@ the set $S times Y times G$ consists of _all possible_
 $("student", "year", "grade")$ combinations.
 
 == use with quantifiers
-set notation allows us to make quantified statements more precise by explicitly stating the domain. for example, this statement:
+set notation allows us to make quantified statements more precise by explicitly
+stating the domain. for example, this statement:
 
 \
 $
@@ -232,7 +233,8 @@ $
 $
 
 \
-states that the square of any real number is at least zero(0). let's try a more complex statement:
+states that the square of any real number is at least zero(0). let's try a more
+complex statement:
 
 \
 $
@@ -243,7 +245,9 @@ $
 states that if $n$ is an integer and $3n + 2$ is odd, then $n$ is odd.
 
 === truth sets
-given a predicate $P(x)$ and its corresponding domain $D$, the *truth set* of $P(x)$ enumerates all elements in $D$ that make the predicate $P$ true. the truth set $T_P$ (non canonical name) for any predicate $P(x)$ is denoted by:
+given a predicate $P(x)$ and its corresponding domain $D$, the *truth set* of
+$P(x)$ enumerates all elements in $D$ that make the predicate $P$ true. the
+truth set $T_P$ (non canonical name) for any predicate $P(x)$ is denoted by:
 
 \
 $
@@ -256,11 +260,17 @@ $
 - $exists x P(x)$ is true iff the truth set $T_P$ is _non-empty_.
 
 == aside: bitmaps
-we can represent sets as bitmaps, a common data structure used in computing. take the set $S = {x | x in NN, x < 10}$; we can represent any subset of $S$ just in $|S| = 10$ bits. before doing that however, we need to agree on an ordering. for ease of understanding, we use the natural order of numbers.
+we can represent sets as bitmaps, a common data structure used in computing.
+take the set $S = {x | x in NN, x < 10}$; we can represent any subset of $S$
+just in $|S| = 10$ bits. before doing that however, we need to agree on an
+ordering. for ease of understanding, we use the natural order of numbers.
 
 \
-to represent any subset of $S$ with a bitmap with natural ordering, we have 10 bits, with the $n^"th"$ bit representing if the number $n$ exists in the set. for example:
+to represent any subset of $S$ with a bitmap with natural ordering, we have 10
+bits, with the $n^"th"$ bit representing if the number $n$ exists in the set.
+for example:
 
 \
 - ${1, 3, 5, 7, 9} = 0101 thick 0101 thick 01$
-- ${1, 1, 1, 4, 5} = 0100 thick 1100 thick 00$ (we remove the duplicated elements in the set, so it is just $1, 4, 5$)
+- ${1, 1, 1, 4, 5} = 0100 thick 1100 thick 00$ (we remove the duplicated
+  elements in the set, so it is just $1, 4, 5$)
