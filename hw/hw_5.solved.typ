@@ -125,8 +125,8 @@ Let $A$ and $B$ be sets. Show that
   - by definition of set difference, $(x in A) or ((x in B) and (x in.not A))$.
   - by distribution, we get
     $((x in A) or (x in B)) and ((x in A) or (x in.not A))$
-  - since $(x in A) or (x in.not A)$ is a tautology, so we can discard the
-    right part of the $or$ operator.
+  - since $(x in A) or (x in.not A)$ is a tautology, so we can discard the right
+    part of the $or$ operator.
   - after simplifying, we get $(x in A) or (x in B)$, and by definition of a
     union, we know that $(x in A union B)$. #qed
 
@@ -141,10 +141,12 @@ Show that if $A$ and $B$ are sets with $A subset.eq B$, then
   - by definition of union, $(x in A) or (x in B)$.
   - if $(x in A)$, then since $forall x ((x in A) -> (x in B))$, $x$ is in $B$.
   - if $(x in B)$, that satisfies our case.
-  - both cases show that for any $x$, $x in B$. therefore, we can say that $A union B = B$. #qed
+  - both cases show that for any $x$, $x in B$. therefore, we can say that
+    $A union B = B$. #qed
 + let $x$ be an arbitrary element in $A inter B$.
   - by definition of intersection, $(x in A) and (x in B)$.
-  - since both side of the $and$ operator are true, we can simplify and get $(x in A)$. #qed
+  - since both side of the $and$ operator are true, we can simplify and get
+    $(x in A)$. #qed
 
 = Problem 8
 Let $A$, $B$, and $C$ be sets. Use the identity $A - B = A inter accent(B, -)$,

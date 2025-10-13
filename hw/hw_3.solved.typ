@@ -140,7 +140,7 @@ step.
   speeding ticket.
 + Since all five roommates (our domain) has taken discrete mathematics, we use
   universal generalization to say that all of them can pass the predicate that
-  $P(x) equiv$ "$x$ has taken a course in discrete mathmatics". Since any
+  $P(x) equiv$ "$x$ has taken a course in discrete mathematics". Since any
   student that has taken discrete mathematics can take an algorithm course, all
   of our roommates can take it by modus ponens.
 + We first use modus ponens to say that the movie John sayles produced about
