@@ -1,7 +1,7 @@
 #import "conf.typ": conf
 #show: conf.with(date: datetime(year: 2025, month: 10, day: 8))
 
-= set functions
+= functions
 
 sets give us a way to formalize the concept of a function. take two non-empty
 sets for example, $A$ and $B$. a *function* $f$ is an assignment of _exactly
