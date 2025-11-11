@@ -125,4 +125,4 @@ $r$ such that $a dot r + b = 0$.
   _(existence step)_
 - assume that $a s + b = 0$.
 - then $a dot s = -b$, so $s = -b / a$, which means $s equiv r$. _(uniqueness
-    step)_ #qed
+  step)_ #qed

@@ -56,7 +56,8 @@ compares the midpoint against the target value; see pseudocode below:
 
 \
 #pseudocode-list(booktabs: true, title: [binary search through sequence])[
-  + *procedure* binary_search(_x_: integer, $a_1$, $a_2$, ..., $a_n$: integers in non-decreasing order)
+  + *procedure* binary_search(_x_: integer, $a_1$, $a_2$, ..., $a_n$: integers
+    in non-decreasing order)
     + _start_ := 1
     + _end_ := n
     + *while* _start_ < _end_:

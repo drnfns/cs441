@@ -196,7 +196,7 @@ forth.
 
 \
 #align(center)[*note*: $(a_1, a_2, ..., a_n) = (b_1, b_2, ..., a_n)$ _if and
-    only if_ $a_i = b_i$ for $i = 1, ..., n$]
+  only if_ $a_i = b_i$ for $i = 1, ..., n$]
 
 == cartesian product
 

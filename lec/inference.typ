@@ -164,7 +164,7 @@ example; and *generalization* is going from specific examples to a general idea.
 
 === universal instantiation (ui)
 if something is true for _everything_ in a domain, then it must be true for _any
-  specific one_ you pick from it.
+specific one_ you pick from it.
 
 \
 $

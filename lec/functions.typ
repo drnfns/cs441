@@ -5,7 +5,7 @@
 
 sets give us a way to formalize the concept of a function. take two non-empty
 sets for example, $A$ and $B$. a *function* $f$ is an assignment of _exactly
-  one_ element of set $B$ to each element of set $A$.
+one_ element of set $B$ to each element of set $A$.
 
 \
 we write $f: A -> B$ to denote that $f$ is a function from set $A$ to set $B$;

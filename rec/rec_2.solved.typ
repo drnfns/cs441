@@ -88,7 +88,7 @@ Use the truth tables to:
 
 = Problem 4
 Let $M(x) equiv x$ _visits the Carnegie Mueseum_ and $A(x) equiv x$ _is an art
-  student_. Let the domain of each be "all students at Pitt".
+student_. Let the domain of each be "all students at Pitt".
 
 + Translate the following statement into English. \
   $
