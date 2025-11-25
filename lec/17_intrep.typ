@@ -108,7 +108,7 @@ and finally find the sum.
         + c := $floor.l$t/b$floor.r$
         + $r_i$ := t - bc
       + $r_n$ := c
-      + r := r shifted j places
+      + r := r \* $b^j$
       + p := add(p, r)
     + *return* ($p_(2n)$, $p_(2n-1)$, ..., $p_1$, $p_0$)
 ]
