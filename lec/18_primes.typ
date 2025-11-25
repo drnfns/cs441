@@ -1,4 +1,5 @@
 #import "conf.typ": conf
+#import "@preview/lovelace:0.3.0": pseudocode-list
 #show: conf.with(date: datetime(year: 2025, month: 11, day: 10))
 
 = primes, gcd's, and lcm's
@@ -53,9 +54,44 @@ trivially:
     and 31.
   - $1147 = 31 times 37$, so 1147 must be composite.
 
-=== the sieve of eratosthenes
+=== finding prime numbers
+the sieve of eratosthenes is a brute-force algorithm for finding all prime
+numbers less than some value $n$.
 
-=== aside: are primes infinite?
+\
+here is the general process:
++ list the numbers less than $n$
++ if the next available prime numbers is less than $sqrt(n)$, cross out all of
+  its multiples
++ repeat until the next available number is greater than $sqrt(n)$
++ all remaining numbers are prime.
+
+\
+here's the pseudocode that constructs the algorithm:
+#pseudocode-list[
+  + *procedure* sieve(n: $NN$)
+    + *create* a boolean array $A[2..n]$, filled with *true*
+    + *for* i *from* 2 *to* $floor(sqrt(n))$
+      + *if* $A[i]$ is *true*
+        + *for* j *from* $i^2$, $i^2 + i$, $i^2 + 2i$, $i^2 + 3i$ ..., *to* n
+          + $A[j]$ := *false*
+    + *return* all $i$ such that $A[i]$ is *true*
+]
+
+=== aside: how many primes are there?
+*theorem*: there are infinitely many prime numbers.
+
+_proof_: assume that there are only a finite number of primes
+$p_1, p_2, ..., p_n$. therefore, there exists a number $Q$ such that
+$Q = (p_1 times p_2 times ... times p_n) + 1$; and by the fundamental theorem of
+arithmetic, $Q$ can be written as the product of two or more primes. however,
+$Q$ is not divisible by any of the primes $p_1, p_2, ..., p_n$ because dividing
+$Q$ by any of these primes would leave a remainder of 1. since none of our
+primes can divide $Q$, that means $Q$ must be divisible by _another_ prime that
+wasn't included in our collection. that means, the prime number that is either
+$Q$, or a prime factor of $Q$ (if $Q$ is a composite number). this contradicts
+our assumption that we have listed all possible primes, and there are infinitely
+many prime numbers. $qed$
 
 == greatest common divisors
 let $a$ and $b$ be integers, not both zero. the largest integer $d$ such that
@@ -99,11 +135,11 @@ that if $a = b q + r$, then $gcd(a, b) = gcd(b, r)$. so, let $r_0 = a$ and
 $r_1 = b$. then:
 
 $
-      & r_0 = r_1 q_1 + r_2        && 0 <= r_2 < r_1 \
-      & r_1 = r_2 q_2 + r_3             && 0 <= r_3 < r_2 \
-      &... \
-      & r_(n-2) = r_(n-1) q_(n-1) + r_n wide && 0 <= r_n < r_(n-1) \
-      & r_(n-1) = r_n q_n
+  & r_0 = r_1 q_1 + r_2                  && 0 <= r_2 < r_1 \
+  & r_1 = r_2 q_2 + r_3                  && 0 <= r_3 < r_2 \
+  & ... \
+  & r_(n-2) = r_(n-1) q_(n-1) + r_n wide && 0 <= r_n < r_(n-1) \
+  & r_(n-1) = r_n q_n
 $
 
 therefore, $gcd(a, b) = r_n$. we can demonstrate this by an example:
@@ -112,8 +148,8 @@ $gcd(414, 662)$.
 $
   662 & = 414 times 1 + 248 \
   414 & = 248 times 1 + 166 \
-  248 & = 168 times 1 + 82 \
-  168 & = 82 times 2 + 2 \
+  248 & = 166 times 1 + 82 \
+  166 & = 82 times 2 + 2 \
    82 & = 2 times 41
 $
 
@@ -156,5 +192,3 @@ $lcm(120, 500) = 2^3 times 3 times 5^3 = 3000 << 120 times 500 = 60000$.
 === lcm's and gcd's
 
 *note*: $a b = lcm(a, b) times gcd(a, b)$.
-
-
