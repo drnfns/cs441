@@ -68,6 +68,6 @@ test each algorithm with for different amount of inputs:
 \
 we can clearly see that algorithm C performs the least amount of operations as
 our input grows. algorithm A and B both grows, however, at different rate. when
-we analyze an algorithm, we wocus on the trends as the problem instances grow in
+we analyze an algorithm, we focus on the trends as the problem instances grow in
 size.
 

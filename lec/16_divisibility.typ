@@ -30,7 +30,7 @@ $b$ where $b$ is the product of $a$ and $k + j$. $qed$
 *theorem*: if $a | b$, then $a | b c$ for all integers $c$.
 
 _proof_: by definition of divisibility, there exist some integer $k$ such that
-$b = a k$. therefore, $b c = (a k) times c$. by the associativity of
+$b = a k$. therefore, $b c = (a k) dot c$. by the associativity of
 multiplication, $b c = a (k c)$. since $k$ and $c$ are integers, their product
 is also an integer. by definition of divisibility, $a$ is divisible by an
 integer $b c = a (k c)$. $qed$
@@ -40,7 +40,7 @@ integer $b c = a (k c)$. $qed$
 
 _proof_: by definition of divisibility, there exist some integer $k$ and $j$
 such that $b = a k$ and $c = b j$. therefore, by substitution,
-$c = (a k) times j$. by definition of divisibility and associativity, we can see
+$c = (a k) dot j$. by definition of divisibility and associativity, we can see
 that $c = a(j k)$. $qed$
 
 == division "algorithm"
@@ -94,7 +94,7 @@ $a c equiv b d (mod m)$.
 
 in simpler words: if $a$ and $b$ are congruent $(mod m)$, and $c$ and $d$ are
 also congruent $(mod m)$, then $(a + c)$ is congruent to $(b + d) (mod m)$ and
-$a times c$ is congruent to $b times d (mod m)$.
+$a dot c$ is congruent to $b dot d (mod m)$.
 
 _proof (addition)_: assume $a equiv b (mod m)$ and $c equiv d (mod m)$.
 according to the property of modulo, this means $m | (a - b)$ and $m | (c - d)$.
@@ -114,7 +114,7 @@ $(a + c) equiv (b + d) (mod m)$. $qed$
 
 _proof (multiplication)_: we can use the algebraic form of congruence from the
 theorem above: $a = b + k m$ and $c = d + j m$ for some integers $k$ and $j$.
-substitute these into the product of $a times c$:
+substitute these into the product of $a dot c$:
 
 $
         a c & = (b + k m) (d + j m) \
