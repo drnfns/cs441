@@ -3,25 +3,25 @@
 #show: conf.with(date: datetime(year: 2025, month: 11, day: 12))
 
 = solving congruences
-imagine it is 10 o'clock. 5 hours later, it is 3 o'clock, not 15. this "resetting"
-behaviour is the essence of *modular arithmetic*.
+imagine it is 10 o'clock. 5 hours later, it is 3 o'clock, not 15. this
+"resetting" behaviour is the essence of *modular arithmetic*.
 
 == arithmetic operations with $mod n$
-$ZZ_m$ denotes the set of non-negative integers less than $m$ (the remainders when
-dividing by $m$).
+$ZZ_m$ denotes the set of non-negative integers less than $m$ (the remainders
+when dividing by $m$).
 
 \
 modular arithmetic "preserves" addition and multiplication:
 $
-  (a + b) mod m &= ((a mod m) + (b mod m)) mod m \
-  (a dot b) mod m &= ((a mod m) (b mod m)) mod m
+    (a + b) mod m & = ((a mod m) + (b mod m)) mod m \
+  (a dot b) mod m & = ((a mod m) (b mod m)) mod m
 $
 
 \
 we define operations restricted to this set:
 $
-  a +_m b &= (a + b) mod m \
-  a dot_m b &= (a dot b) mod m
+    a +_m b & = (a + b) mod m \
+  a dot_m b & = (a dot b) mod m
 $
 
 == solving linear congruences
@@ -29,7 +29,7 @@ we look at equations of the form $a x equiv b (mod m)$.
 
 === additive inverses
 look at an example: in order to solve $a + 8 equiv 2 (mod 11)$:
-+ find the *additive inverse*  of 8 modulo 11.
++ find the *additive inverse* of 8 modulo 11.
   - $-8 equiv 3 (mod 11)$
   - $-8 = (11 dot -1) + 3$
 + add 3 to both sides: $a equiv 5 (mod 11)$.
@@ -37,27 +37,30 @@ look at an example: in order to solve $a + 8 equiv 2 (mod 11)$:
 *note*: adding any multiple of $m$ preserves the value $(mod m)$.
 
 === multiplicative inverses
-to solve $a x equiv b (mod m)$ (a *linear congruence*), given values for $a$ and $b$, we need a value $accent(a, -)$ such that
-$a dot accent(a, -) equiv 1 (mod m)$. if we have this value, we can multiply on both sides, and then simplify. bézout's theorem helps to find that number.
+to solve $a x equiv b (mod m)$ (a *linear congruence*), given values for $a$ and
+$b$, we need a value $accent(a, -)$ such that
+$a dot accent(a, -) equiv 1 (mod m)$. if we have this value, we can multiply on
+both sides, and then simplify. bézout's theorem helps to find that number.
 
 \
-*theorem* (bézout's theorem): if $gcd(a, m) = 1$ ($a$ and $m$ are coprime), there exist integers
-$s$ and $t$ such that: $s a + t m = 1$.
+*theorem* (bézout's theorem): if $gcd(a, m) = 1$ ($a$ and $m$ are coprime),
+there exist integers $s$ and $t$ such that: $s a + t m = 1$.
 
 \
-this implies $s a equiv 1 (mod m)$, meaning $s$ is the multiplicative inverse
-of $a$.
+this implies $s a equiv 1 (mod m)$, meaning $s$ is the multiplicative inverse of
+$a$.
 
 \
-*collary*: since $gcd(a, m) = 1$ and $s a + t m = 1$, by substitution, we can get the *bézout identity*: $gcd(a, b) = s a + t b$.
+*collary*: since $gcd(a, m) = 1$ and $s a + t m = 1$, by substitution, we can
+get the *bézout identity*: $gcd(a, b) = s a + t b$.
 
 == extended euclidean algorithm (eea)
-we utilise the *extended euclidean algorithm* to find the gcd and the bézout numbers ($s, t$).
+we utilise the *extended euclidean algorithm* to find the gcd and the bézout
+numbers ($s, t$).
 
 \
-*example*: find gcd and bézout numbers for 99 and 78.
-we track $r_i = r_(i-2) - q_i r_(i-1)$ and work backwards (or track $s, t$
-alongside):
+*example*: find gcd and bézout numbers for 99 and 78. we track
+$r_i = r_(i-2) - q_i r_(i-1)$ and work backwards (or track $s, t$ alongside):
 
 \
 #table(
@@ -73,8 +76,7 @@ alongside):
 )
 
 \
-$gcd(99, 78) = 3$.
-back-substitution yields $s = -11, t = 14$, so:
+$gcd(99, 78) = 3$. back-substitution yields $s = -11, t = 14$, so:
 $ 99(-11) + 78(14) = 3 $
 
 \
@@ -97,11 +99,9 @@ $
 $
 
 
-\ 
-*solution*:
-let $m = m_1 m_2 ... m_n$.
-let $M_k = m / m_k$ (product of all moduli except $m_k$).
-let $y_k$ be the inverse of $M_k$ modulo $m_k$.
+\
+*solution*: let $m = m_1 m_2 ... m_n$. let $M_k = m / m_k$ (product of all
+moduli except $m_k$). let $y_k$ be the inverse of $M_k$ modulo $m_k$.
 
 \
 the unique solution modulo $m$ is:

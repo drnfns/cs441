@@ -55,11 +55,11 @@ trivially:
   - $1147 = 31 times 37$, so 1147 must be composite.
 
 === finding prime numbers
-the sieve of eratosthenes is a brute-force algorithm for finding all prime
+the *sieve of eratosthenes* is a brute-force algorithm for finding all prime
 numbers less than some value $n$.
 
 \
-here is the general process:
+here is the general process (the pseudocode follows):
 + list the numbers less than $n$
 + if the next available prime numbers is less than $sqrt(n)$, cross out all of
   its multiples
@@ -67,8 +67,7 @@ here is the general process:
 + all remaining numbers are prime.
 
 \
-here's the pseudocode that constructs the algorithm:
-#pseudocode-list[
+#pseudocode-list(booktabs: true, title: [algorithm: sieve of eratothenes])[
   + *procedure* sieve(n: $NN$)
     + *create* a boolean array $A[2..n]$, filled with *true*
     + *for* i *from* 2 *to* $floor(sqrt(n))$
@@ -130,30 +129,40 @@ for example, we want to find $gcd(120, 500)$.
 therefore, $gcd(120, 500) = 2^3 times 3^0 times 5 = 20$.
 
 === euclid's algorithm
-another way to find the gcd is by using euclid's algorithm. you might notice
-that if $a = b q + r$, then $gcd(a, b) = gcd(b, r)$. so, let $r_0 = a$ and
-$r_1 = b$. then:
+another way to find the gcd of two numbers is by using euclid's algorithm. based
+on the observation that $gcd(a, b) = gcd(b, a mod b)$, we can iteratively reduce
+the problem size until we reach a remainder of 0. the algorithm can be described
+in the pseudocode below:
 
-$
-  & r_0 = r_1 q_1 + r_2                  && 0 <= r_2 < r_1 \
-  & r_1 = r_2 q_2 + r_3                  && 0 <= r_3 < r_2 \
-  & ... \
-  & r_(n-2) = r_(n-1) q_(n-1) + r_n wide && 0 <= r_n < r_(n-1) \
-  & r_(n-1) = r_n q_n
-$
+\
+#pseudocode-list(booktabs: true, title: [algorithm: euclid's algorithm])[
+  + *procedure* euclid(a: $ZZ^+$, b: $ZZ^+$)
+    + *while* $b != 0$
+      + $r := a mod b$
+      + $a := b$
+      + $b := r$
+    + *return* $a$
+]
 
-therefore, $gcd(a, b) = r_n$. we can demonstrate this by an example:
-$gcd(414, 662)$.
+\
+the value returned in $a$ is the last non-zero remainder, which corresponds to
+the greatest common divisor.
 
+==== example
+we want to find $gcd(414, 662)$. we first divide the larger num($b$) by the
+smaller num($a$), and keep the remainder($r$). then, we shift left; the small
+number($a$) become the big number($b$), and we divide it by the remainder($r$).
+we repeat this process until the remainder is 0, and the last non-zero remainder
+is the gcd.
+
+\
 $
   662 & = 414 times 1 + 248 \
   414 & = 248 times 1 + 166 \
   248 & = 166 times 1 + 82 \
   166 & = 82 times 2 + 2 \
-   82 & = 2 times 41
+   82 & = #rect[2] times 41
 $
-
-by euclid's algorithm, we can see that $gcd(414, 662) = 2$.
 
 == least common multiples
 the *least common multiple* of the integers $a$ and $b$, where neither is 0, is
@@ -189,6 +198,8 @@ for example, we want to find $lcm(120, 500)$.
 therefore,
 $lcm(120, 500) = 2^3 times 3 times 5^3 = 3000 << 120 times 500 = 60000$.
 
-=== lcm's and gcd's
+=== aside: relationship between lcm and gcd
 
-*note*: $a b = lcm(a, b) times gcd(a, b)$.
+$
+  a b = lcm(a, b) times gcd(a, b)
+$
