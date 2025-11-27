@@ -39,8 +39,10 @@ look at an example: in order to solve $a + 8 equiv 2 (mod 11)$:
 === multiplicative inverses
 to solve $a x equiv b (mod m)$ (a *linear congruence*), given values for $a$ and
 $b$, we need a value $accent(a, -)$ such that
-$a dot accent(a, -) equiv 1 (mod m)$. if we have this value, we can multiply on
-both sides, and then simplify. bézout's theorem helps to find that number.
+$a dot accent(a, -) equiv 1 (mod m)$. if we have this value, we can multiply it
+on both sides (similarly to multiplying by the reciprocal), and then simplify to
+find the solution. bézout's theorem, introduced below, helps to find that
+number.
 
 \
 *theorem* (bézout's theorem): if $gcd(a, m) = 1$ ($a$ and $m$ are coprime),
@@ -55,36 +57,68 @@ $a$.
 get the *bézout identity*: $gcd(a, b) = s a + t b$.
 
 == extended euclidean algorithm (eea)
-we utilise the *extended euclidean algorithm* to find the gcd and the bézout
-numbers ($s, t$).
+the extended euclidean algorithm builds on the basic version that we have
+learned in the previous lecture. other than just finding the gcd, we also find
+the bézout numbers ($s, t$; refer to section above).
+
+the first step of the extended euclidean algorithm is just by performing the
+basic version first; let's use $a = 99$ and $b = 78$ as an example.
 
 \
-*example*: find gcd and bézout numbers for 99 and 78. we track
-$r_i = r_(i-2) - q_i r_(i-1)$ and work backwards (or track $s, t$ alongside):
+$
+  99 & = 78 dot 1 + 21 \
+  78 & = 21 dot 3 + 15 \
+  21 & = 15 dot 1 + 6 \
+  15 & = 6 dot 2 + 3 \
+   6 & = 2 dot 3 + 0
+$
 
 \
-#table(
-  columns: (auto, auto, auto, auto),
-  inset: 5pt,
-  align: center,
-  [*row*], [*a*], [*b*], [*formula*],
-  [1], [99], [78], [$99 = 1 dot 78 + 21$],
-  [2], [78], [21], [$78 = 3 dot 21 + 15$],
-  [3], [21], [15], [$21 = 1 dot 15 + 6$],
-  [4], [15], [6], [$15 = 2 dot 6 + 3$],
-  [5], [6], [3], [$6 = 2 dot 3 + 0$],
-)
+since the last remainder is zero(0), we disregard the last line and use the line
+before: $gcd(99, 78) = 3$.
+
+to find out the bézout numbers for the second step of the algorithm, we want to
+find how to express 3 with 99 and 78. to do that, we look at the previous work,
+start from the bottom, and work our way back.
 
 \
-$gcd(99, 78) = 3$. back-substitution yields $s = -11, t = 14$, so:
-$ 99(-11) + 78(14) = 3 $
+$
+   3 & = 15 - (2 dot 6) \
+   6 & = 21 - (1 dot 15) \
+   3 & = 15 - (2 dot (21 - (1 dot 15)))              && "(substitute 6)" \
+     & = 15 - (2 dot 21) + (2 dot 15)                && "(distribute -2)" \
+     & = (3 dot 15) - (2 dot 21)                     && "(combine 15s, rearrange)" \
+  15 & = 78 - (3 dot 21) \
+   3 & = (3 dot (78 - (3 dot 21))) - (2 dot 21) wide && "(substitute 15)" \
+     & = (3 dot 78) - (9 dot 21) - (2 dot 21)        && "(distribute 3)" \
+     & = (3 dot 78) - (11 dot 21)                    && "(combine 21s)" \
+  21 & = 99 - (1 dot 78) \
+   3 & = (3 dot 78) - (11 dot (99 - (1 dot 78)))     && "(substitute 21)" \
+     & = (3 dot 78) - (11 dot 99) + (11 dot 78)      && "(distribute -11)" \
+   3 & = (#rect[14] dot 78) + (#rect[-11] dot 99)    && "(combine 78s)"
+$
 
 \
-*application*: solve the linear congruence $57x equiv 5 (mod 98)$.
-+ eea on 98 and 57 gives: $98(-25) + 57(43) = 1$.
-+ inverse of 57 mod 98 is 43.
-+ multiply both sides by 43:
-  $ x equiv 5 dot 43 equiv 215 equiv 19 (mod 98) $
+we have found that $s = -11$ and $t = 14$ such that $3 = s a + t b$.
+
+\
+here's an iterative version of the algorithm in pseudocode:
+
+\
+#pseudocode-list(booktabs: true, title: [algorithm: extended euclidean algorithm
+  (eea)])[
+  + *procedure* extended_euclid(a, b)
+    + $("old"_r, r) := (a, b)$
+    + $("old"_s, s) := (1, 0)$
+    + $("old"_t, t) := (0, 1)$
+    + *while* $r != 0$
+      + $q := floor("old"_r \/ r)$
+      + $("old"_r, r) := (r, "old"_r - q * r)$
+      + $("old"_s, s) := (s, "old"_s - q * s)$
+      + $("old"_t, t) := (t, "old"_t - q * t)$
+    + *return* $("old"_r, "old"_s, "old"_t)$
+]
+
 
 == chinese remainder theorem (crt)
 used to solve systems of congruences where moduli are pairwise coprime.
