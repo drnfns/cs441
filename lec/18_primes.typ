@@ -160,8 +160,8 @@ $
   662 & = 414 times 1 + 248 \
   414 & = 248 times 1 + 166 \
   248 & = 166 times 1 + 82 \
-  166 & = 82 times 2 + 2 \
-   82 & = #rect[2] times 41
+  166 & = 82 times 2 + #rect[2] \
+   82 & = 2 times 41 + 0
 $
 
 == least common multiples
