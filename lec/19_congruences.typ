@@ -83,19 +83,19 @@ start from the bottom, and work our way back.
 
 \
 $
-   3 & = 15 - (2 dot 6) \
-   6 & = 21 - (1 dot 15) \
-   3 & = 15 - (2 dot (21 - (1 dot 15)))              && "(substitute 6)" \
-     & = 15 - (2 dot 21) + (2 dot 15)                && "(distribute -2)" \
-     & = (3 dot 15) - (2 dot 21)                     && "(combine 15s, rearrange)" \
+  3 & = 15 - (2 dot 6) \
+  6 & = 21 - (1 dot 15) \
+  3 & = 15 - (2 dot (21 - (1 dot 15))) && "(substitute 6)" \
+  & = 15 - (2 dot 21) + (2 dot 15) && "(distribute -2)" \
+  & = (3 dot 15) - (2 dot 21) && "(combine 15s, rearrange)" \
   15 & = 78 - (3 dot 21) \
-   3 & = (3 dot (78 - (3 dot 21))) - (2 dot 21) wide && "(substitute 15)" \
-     & = (3 dot 78) - (9 dot 21) - (2 dot 21)        && "(distribute 3)" \
-     & = (3 dot 78) - (11 dot 21)                    && "(combine 21s)" \
+  3 & = (3 dot (78 - (3 dot 21))) - (2 dot 21) wide && "(substitute 15)" \
+  & = (3 dot 78) - (9 dot 21) - (2 dot 21) && "(distribute 3)" \
+  & = (3 dot 78) - (11 dot 21) && "(combine 21s)" \
   21 & = 99 - (1 dot 78) \
-   3 & = (3 dot 78) - (11 dot (99 - (1 dot 78)))     && "(substitute 21)" \
-     & = (3 dot 78) - (11 dot 99) + (11 dot 78)      && "(distribute -11)" \
-   3 & = (#rect[14] dot 78) + (#rect[-11] dot 99)    && "(combine 78s)"
+  3 & = (3 dot 78) - (11 dot (99 - (1 dot 78))) && "(substitute 21)" \
+  & = (3 dot 78) - (11 dot 99) + (11 dot 78) && "(distribute -11)" \
+  3 & = (#rect[14] dot 78) + (#rect[-11] dot 99) && "(combine 78s)"
 $
 
 \
