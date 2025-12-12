@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/bin/sh
 
-for p in ./{lec,rec,hw}/*.typ; do
+for p in ./src/*.typ; do
   typstyle --wrap-text -l 80 -i "$p" & 
   printf '(%s) formatting %s...\n' "$!" "$p"
 done
